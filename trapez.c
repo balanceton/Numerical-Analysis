@@ -30,11 +30,11 @@ int main(){
     scanf("%d",&n);
     delta = (kok2-kok1)/n;
     float toplam = 0.0;
-    for(i=0;i<n-1;i++){
+    for(i=1;i<=n-1;i++){
         toplam += hesapla(katsayilar,kok1+i*delta,derece);
     }
-
-    toplam = (hesapla(katsayilar,kok1,derece)+hesapla(katsayilar,kok2,derece))/2;
+    printf("%d\n",toplam);
+    toplam += (hesapla(katsayilar,kok1,derece)+hesapla(katsayilar,kok2,derece))/2;
     toplam *= delta;
 	
     printf("Sonuc:%f",toplam);

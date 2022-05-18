@@ -23,8 +23,7 @@ int main(){
 		printf("Buyukten kucuge katsayilari giriniz:");
 		scanf("%f",&katsayilar[i]);
 	}	
-	printf("Koku giriniz:");
-	scanf("%d",&kok);
+	
 	
 	
 	printf("Degisim oranini giriniz:");
