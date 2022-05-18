@@ -15,7 +15,8 @@ float hesapla(float arr[10],float kok,int derece){ // fonksiyon degeri hesaplama
 
 
 int main(){
-	int derece,i;
+	int derece,i,kok1,kok2,n;
+    float delta;
 	float katsayilar[10];
 	printf("Denklemin derecesini giriniz:");
 	scanf("%d",&derece);
@@ -23,13 +24,20 @@ int main(){
 		printf("Buyukten kucuge katsayilari giriniz:");
 		scanf("%f",&katsayilar[i]);
 	}	
-	printf("Koku giriniz:");
-	scanf("%d",&kok);
-	
-	
-	printf("Degisim oranini giriniz:");
-	scanf("%d",&y);
+	printf("Kok araligini giriniz:");
+    scanf("%d %d",&kok1,&kok2);
+    printf("Aralik sayisini giriniz:");
+    scanf("%d",&n);
+    delta = (kok2-kok1)/n;
+    float toplam = 0.0;
+    for(i=0;i<n-1;i++){
+        toplam += hesapla(katsayilar,kok1+i*delta,derece);
+    }
 
+    toplam = (hesapla(katsayilar,kok1,derece)+hesapla(katsayilar,kok2,derece))/2;
+    toplam *= delta;
+	
+    printf("Sonuc:%f",toplam);
 
 	
 		return 0;
