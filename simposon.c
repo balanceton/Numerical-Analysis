@@ -1,8 +1,8 @@
 #include<stdio.h>
- #include<math.h>
+#include<math.h>
  
 
-float hesapla(float arr[10],float kok,int derece){ // fonksiyon de�eri hesaplama
+float hesapla(float arr[10],float kok,int derece){ // fonksiyon degeri hesaplama
 	int i;
 	float toplam = 0.0;
 	for(i=0;i<derece;i++){
