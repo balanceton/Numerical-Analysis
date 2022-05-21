@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <math.h>
 
 int minor(int x,int y,int arr[3][3]){
 	int i,j;
@@ -35,8 +36,9 @@ int determinant3(int x,int arr[x][x]){ //determinant hesaplama
 	int i;
 	int det = 0;
 	for(i=0;i<3;i++){
-		det += (-1)^(i)*determinant2(minor(1,i,arr));
+		det += pow(-1,i)*determinant2(minor(1,i,arr));
 	}
+	return det;
 }
 
 int transpoz(int x,int arr[x][x]){
@@ -70,6 +72,7 @@ int main(){
 
 	// 2-)Determinantı hesapla
     determinant = determinant3(x,mat);
+    printf("\ndeterminant:%d \n",determinant);
 
 	// 3-) Her bir 2x2 minor için det bul
      for(i=0;i<x;i++){
