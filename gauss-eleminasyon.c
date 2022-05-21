@@ -24,7 +24,7 @@ float altucgen(int x,float arr[x][x],float r[x]){
 	}
 	
 	
-	float  coz(int x, float arr[x][x], float r[x]){ // birim matrisi çözme
+float  coz(int x, float arr[x][x], float r[x]){ // birim matrisi çözme
 		int i,j;
 		float kokler[x];
 		
