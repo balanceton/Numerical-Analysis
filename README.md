@@ -1,2 +1,2 @@
-# Say-sal-Analiz
-Sayısal analiz dönem projesi
+# Numerical analysis
+Numerical analysis term project
